@@ -1,0 +1,25 @@
+/* body{
+    text-align: center;
+    margin: auto;
+    background-color: antiquewhite;
+} */
+body{
+    background-color: rgb(171, 92, 193);
+    background-image:url('../img/images.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat ;
+    text-align: center;
+ }
+
+#div1, #div2, #div3{
+    display: inline-block;
+    margin: auto;
+    width: 80%;
+    color: rgba(66, 71, 180, 0.877);
+    border: 3px solid #733bb3;
+    padding: 10px;
+    text-align: center;
+    background: rgba(104, 39, 183, 0.7);
+    height: 400px;
+    cursor: pointer;
+}

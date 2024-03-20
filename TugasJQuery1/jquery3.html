@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style_jquery.css">
+</head>
+<body>
+    <h2>Letakan Kursor ke masing-masing kotak untuk melihat gambar lalu dengarkan</h2>
+    <div id="div1">
+        Hewan Monyet
+    </div>
+    <div id="div2">
+        Hewan Singa
+    </div>
+    <div id="div3">
+        Hewan Lumba Lumba 
+    </div>
+    <audio id="audio-monyet" src="sound/monyet.mp3"></audio>
+    <audio id="audio-singa" src="sound/singa.mp3"></audio>
+    <audio id="audio-lumba" src="sound/lumba.mp3"></audio>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Ketika mouse berada di atas gambar atau kotak, maka hewannya bisa bersuara
+            $("#div1").mouseover(function(){
+                $(this).css({
+                    background: "url('https://awsimages.detik.net.id/community/media/visual/2017/12/06/6414c1ae-fcd1-49a6-8316-4a71c29f93ff_43.jpg?w=600&q=90')"
+                });
+                document.getElementById('audio-monyet').play();
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background: "violet"
+                });
+            });
+
+            $("#div2").mouseover(function(){
+                $(this).css({
+                    background: "url('https://img.okezone.com/content/2023/10/19/406/2904557/8-hewan-yang-bisa-membunuh-singa-di-alam-liar-raja-hutan-jangan-sok-jagoan-y7qBOhpKYt.jpg')"
+                });
+                document.getElementById('audio-singa').play();
+            });
+
+            $("#div3").mouseover(function(){
+                $(this).css({
+                    background: "url('https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/akurat/images/2023/02/big/img_63eb2e62dadde1-24767693-62993103.jpg')"
+                });
+                document.getElementById('audio-lumba').play();
+            });
+        });
+    </script>
+</body>
+</html>
